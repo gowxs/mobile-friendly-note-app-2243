@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mobile Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="app-header">
+            <h1 class="app-title">My Mobile Notes</h1>
+        </header>
+
+        <section id="list-view" class="active-view">
+            <ul id="notes-list" class="notes-list">
+                <!-- Notes will be rendered here by JavaScript -->
+            </ul>
+            <button id="add-note-fab" class="fab" aria-label="Add New Note">+</button>
+        </section>
+
+        <section id="detail-view" class="hidden-view">
+            <form id="note-form" class="note-form">
+                <div class="form-group">
+                    <label for="note-title" class="sr-only">Note Title</label>
+                    <input type="text" id="note-title" placeholder="Note Title" required>
+                </div>
+                <div class="form-group">
+                    <label for="note-content" class="sr-only">Note Content</label>
+                    <textarea id="note-content" placeholder="Note content..." rows="8"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="button primary">Save Note</button>
+                    <button type="button" id="back-to-list-btn" class="button secondary">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
